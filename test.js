@@ -89,6 +89,10 @@ describe('arity-function', () => {
 
       var spyX = arityN(spy, undefined);
       hasArity(spyX, spy, 0);
+
+      var newFn = arityN(function(a,b,c,d,e,f,g,h,i,j,k){ return true; }, 9);
+      expect(newFn.length).to.be.eql(11);
+      expect(newFn()).to.be.eql(true);
     });
   });
 });
