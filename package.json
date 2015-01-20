@@ -1,6 +1,6 @@
 {
   "name": "arity-n",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Wraps a function with a function of a sertain arity.",
   "main": "N.js",
   "scripts": {

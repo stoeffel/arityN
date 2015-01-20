@@ -1,5 +1,5 @@
 module.exports = function(fn) {
   return function(a, b) {
-    fn.apply(null, arguments);
+    return fn.apply(null, arguments);
   };
 };
