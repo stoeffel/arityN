@@ -4,7 +4,7 @@ var arity0 = require('./0'),
   arity3 = require('./3'),
   arity4 = require('./4'),
   arity5 = require('./5'),
-  arityN = require('./N'),
+  arityN = require('./'),
   spy = require('sinon').spy(),
   expect = require('expect.js');
 
@@ -93,7 +93,7 @@ describe('arity-function', () => {
       hasArity(spyX, spy, 0);
 
       var newFn = arityN(function(a,b,c,d,e,f,g,h,i,j,k){ return true; }, 9);
-      expect(newFn.length).to.be.eql(11);
+      expect(newFn.length).to.be.eql(9);
       expect(newFn()).to.be.eql(true);
     });
   });
