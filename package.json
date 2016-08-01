@@ -1,7 +1,7 @@
 {
   "name": "arity-n",
-  "version": "1.0.3",
-  "description": "Wraps a function with a function of a sertain arity.",
+  "version": "1.0.4",
+  "description": "Wraps a function with a function of a certain arity.",
   "main": "N.js",
   "scripts": {
     "test": "mocha --reporter nyan --compilers js:mocha-traceur"
