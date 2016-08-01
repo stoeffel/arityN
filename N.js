@@ -1,16 +1,20 @@
-var arityFn = [
-  require('./0'),
-  require('./1'),
-  require('./2'),
-  require('./3'),
-  require('./4'),
-  require('./5')
-];
+var cached = {}
 
 module.exports = function(fn, n) {
-  if (n && n <= 5) {
-    return arityFn[n](fn);
-  } else {
-    return fn;
-  }
-};
+    n = Number(n)
+
+    if (Number.isNaN(n) || n < 0) return fn
+
+    if (cached[n]) return cached[n](fn)
+
+    var args = []
+    for (var i = 0; i < n; i++) args.push('a' + i)
+    args = args.join(', ')
+
+    var functionTemplate = 'return function(' + args +	') { return fn.call(this' +
+	(args.length ? ', ' + args : '') +
+	') }'
+
+    cached[n] = new Function('fn', functionTemplate)
+    return cached[n](fn)
+}

@@ -1,8 +1,8 @@
 {
   "name": "arity-n",
-  "version": "1.0.3",
-  "description": "Wraps a function with a function of a sertain arity.",
-  "main": "N.js",
+  "version": "2.0.0",
+  "description": "Wraps a function with a function of a certain arity.",
+  "main": "index.js",
   "scripts": {
     "test": "mocha --reporter nyan --compilers js:mocha-traceur"
   },
@@ -25,7 +25,8 @@
     "expect.js": "^0.3.1",
     "mocha": "^2.1.0",
     "mocha-traceur": "^2.1.0",
-    "sinon": "^1.12.2"
+    "sinon": "^1.12.2",
+    "traceur": "0.0.111"
   },
   "dependencies": {}
 }

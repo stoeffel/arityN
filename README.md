@@ -1,7 +1,7 @@
 arity-n
 ============
 [![Build Status](https://travis-ci.org/stoeffel/arityN.svg)](https://travis-ci.org/stoeffel/arityN) [![npm version](https://badge.fury.io/js/arity-n.svg)](http://badge.fury.io/js/arity-n)
-> Wraps a function with a function of a sertain arity.
+> Wraps a function with a function of a certain arity.
 
 Installation
 ------------
